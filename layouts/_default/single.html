@@ -1,0 +1,17 @@
+{{ define "main" }}
+<main class="container-width space-y-6">
+  <section class="panel hero-rivet p-6 sm:p-10">
+    <p class="eyebrow">Atlas Abrasives &amp; Coatings</p>
+    <h1 class="section-title mt-2">{{ .Title }}</h1>
+    {{ with .Description }}
+    <p class="mt-4 max-w-3xl text-base sm:text-lg text-muted">{{ . }}</p>
+    {{ end }}
+  </section>
+
+  <section class="panel p-7 sm:p-12">
+    <div class="content-body{{ if .Params.compactContent }} content-compact{{ end }}">
+      {{ .Content }}
+    </div>
+  </section>
+</main>
+{{ end }}

@@ -1,0 +1,161 @@
+{{ $contact := .Site.Params.contact }}
+{{ $siteName := .Site.Params.siteName }}
+{{ $description := .Site.Params.description }}
+{{ $phone := $contact.phone }}
+{{ $city := $contact.city }}
+{{ $region := $contact.region }}
+{{ $country := $contact.country }}
+{{ $latitude := $contact.latitude }}
+{{ $longitude := $contact.longitude }}
+{{ $serviceArea := $contact.serviceArea }}
+{{ $sameAs := slice }}
+{{ with .Site.Params.social.facebook }}{{ $sameAs = $sameAs | append . }}{{ end }}
+{{ with .Site.Params.social.instagram }}{{ $sameAs = $sameAs | append . }}{{ end }}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ .Site.BaseURL }}#website",
+      "url": "{{ .Site.BaseURL }}",
+      "name": "{{ $siteName }}",
+      "description": "{{ $description }}"
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "{{ .Site.BaseURL }}#localbusiness",
+      "name": "{{ $siteName }}",
+      "description": "{{ $description }}",
+      "url": "{{ .Site.BaseURL }}",
+      "telephone": "{{ $phone }}",
+      "email": "{{ $contact.email }}",
+      "image": "{{ .Site.BaseURL }}{{ strings.TrimPrefix "/" .Site.Params.defaultImage }}",
+      "priceRange": "$$",
+      "founder": {
+        "@type": "Person",
+        "name": "{{ .Site.Params.ownerName }}",
+        "jobTitle": "{{ .Site.Params.ownerTitle }}"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{{ $city }}",
+        "addressRegion": "{{ $region }}",
+        "addressCountry": "{{ $country }}"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "{{ $latitude }}",
+        "longitude": "{{ $longitude }}"
+      },
+      "areaServed": "{{ $serviceArea }}",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "07:00",
+          "closes": "18:00"
+        }
+      ]{{ if gt (len $sameAs) 0 }},
+      "sameAs": [
+        {{ range $index, $item := $sameAs }}{{ if gt $index 0 }},{{ end }}"{{ $item }}"{{ end }}
+      ]{{ end }}
+    },
+    {
+      "@type": "WebPage",
+      "@id": "{{ .Permalink }}#webpage",
+      "url": "{{ .Permalink }}",
+      "name": "{{ .Title }}",
+      "isPartOf": {
+        "@id": "{{ .Site.BaseURL }}#website"
+      },
+      "about": {
+        "@id": "{{ .Site.BaseURL }}#localbusiness"
+      },
+      "description": "{{ .Description | default .Site.Params.description }}"
+    }
+  ]
+}
+</script>
+
+{{ if not .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ .Site.BaseURL }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ .Title }}",
+      "item": "{{ .Permalink }}"
+    }
+  ]
+}
+</script>
+{{ end }}
+
+{{ with .Params.serviceType }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ . }}",
+  "provider": {
+    "@id": "{{ $.Site.BaseURL }}#localbusiness"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Brigham City"
+    },
+    {
+      "@type": "State",
+      "name": "Utah"
+    }
+  ],
+  "serviceType": [
+    "Sandblasting",
+    "Abrasive Blasting",
+    "Surface Preparation",
+    "Coating Removal",
+    "Mobile Sandblasting"
+  ],
+  "url": "{{ $.Permalink }}"
+}
+</script>
+{{ end }}
+
+{{ with .Params.faq }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{ range $index, $item := . }}{{ if gt $index 0 }},{{ end }}
+    {
+      "@type": "Question",
+      "name": "{{ $item.q }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ $item.a }}"
+      }
+    }
+    {{ end }}
+  ]
+}
+</script>
+{{ end }}

@@ -1,0 +1,60 @@
+baseURL = "https://www.atlasabrasives.com/"
+languageCode = "en-us"
+title = "Atlas Abrasives & Coatings"
+enableRobotsTXT = true
+summaryLength = 20
+disableKinds = ["taxonomy", "term"]
+
+[sitemap]
+changefreq = "weekly"
+priority = 0.8
+filename = "sitemap.xml"
+
+[pagination]
+pagerSize = 12
+
+[params]
+siteName = "Atlas Abrasives & Coatings"
+tagline = "Built to Last. Done Right."
+description = "Atlas Abrasives & Coatings is a Brigham City and Box Elder County sandblasting company providing mobile abrasive blasting and surface prep across Northern Utah."
+defaultImage = "/img/og-atlas-abrasives.svg"
+ownerName = "Kade Atkinson"
+ownerTitle = "Owner/Operator"
+
+[params.contact]
+phone = "+14359790770"
+phoneDisplay = "435-979-0770"
+email = "kade@atlasabrasivescoatings.com"
+city = "Brigham City"
+region = "UT"
+country = "US"
+locationDisplay = "Brigham City, UT"
+latitude = "41.5102"
+longitude = "-112.0155"
+hours = "Mon-Fri 7:00 AM-6:00 PM"
+serviceArea = "Brigham City, Box Elder County, and surrounding Northern Utah communities"
+
+[params.social]
+facebook = ""
+instagram = ""
+
+[menu]
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Services"
+url = "/services/"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 3
+
+[[menu.main]]
+name = "Contact"
+url = "/contact/"
+weight = 4

@@ -1,0 +1,60 @@
+<nav class="sticky top-0 z-50 border-b border-steel-700 bg-steel-900/95 backdrop-blur-sm">
+  <div class="container-width top-nav-height flex items-center justify-between gap-3">
+    <a href="{{ .Site.Home.RelPermalink }}" class="font-display text-2xl font-bold uppercase tracking-[0.08em] text-white">
+      Atlas Abrasives &amp; Coatings
+    </a>
+
+    <button
+      id="menu-toggle"
+      class="inline-flex items-center border border-steel-600 px-3 py-2 text-sm font-semibold uppercase tracking-[0.12em] text-steel-100 lg:hidden"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+      type="button"
+    >
+      Menu
+    </button>
+
+    <ul class="hidden items-center gap-6 lg:flex">
+      {{ range .Site.Menus.main }}
+      <li>
+        <a href="{{ .URL }}" class="nav-link {{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}nav-link-active{{ end }}">
+          {{ .Name }}
+        </a>
+      </li>
+      {{ end }}
+      <li>
+        <a href="/contact/" class="btn-primary">Get a Quote</a>
+      </li>
+    </ul>
+  </div>
+
+  <div id="mobile-menu" class="hidden border-t border-steel-700 lg:hidden">
+    <ul class="container-width py-3">
+      {{ range .Site.Menus.main }}
+      <li>
+        <a href="{{ .URL }}" class="block border-b border-steel-800 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-steel-100">
+          {{ .Name }}
+        </a>
+      </li>
+      {{ end }}
+      <li class="pt-3">
+        <a href="/contact/" class="btn-primary w-full">Get a Quote</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  (function () {
+    var toggle = document.getElementById("menu-toggle");
+    var menu = document.getElementById("mobile-menu");
+    if (!toggle || !menu) {
+      return;
+    }
+    toggle.addEventListener("click", function () {
+      var isExpanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", isExpanded ? "false" : "true");
+      menu.classList.toggle("hidden");
+    });
+  })();
+</script>
