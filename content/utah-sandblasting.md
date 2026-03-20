@@ -1,8 +1,8 @@
 ---
-title: "Utah Sandblasting"
-seoTitle: "Utah Sandblasting Contractor | Atlas Abrasives & Coatings"
-description: "Utah sandblasting contractor for mobile on-site abrasive blasting and drop-off surface preparation across Northern Utah."
-serviceType: "Utah Sandblasting"
+title: "Northern Utah Sandblasting"
+seoTitle: "Northern Utah Sandblasting Contractor | Atlas Abrasives & Coatings"
+description: "Northern Utah sandblasting contractor for mobile on-site abrasive blasting and drop-off surface preparation."
+serviceType: "Northern Utah Sandblasting"
 faq:
   - q: "Do you serve areas outside Brigham City?"
     a: "Yes. We handle projects across Northern Utah depending on project scope, access, and scheduling."
@@ -14,9 +14,9 @@ faq:
 
 Atlas Abrasives & Coatings is a trusted option for **Utah sandblasting** projects that require durable surface prep and dependable execution.
 
-## Northern Utah and Box Elder County Sandblasting Services
+## Northern Utah Sandblasting Services
 
-We support projects throughout Northern Utah, including Box Elder County, with practical scheduling and clear scope planning.
+We support projects throughout Northern Utah with practical scheduling and clear scope planning.
 
 ## Two Ways to Get Service
 
@@ -34,4 +34,4 @@ We support projects throughout Northern Utah, including Box Elder County, with p
 
 Our process is centered on safety, substrate-appropriate media, and prep quality that helps coatings hold up over time.
 
-For Utah sandblasting estimates, contact Atlas Abrasives & Coatings with your project details.
+For Northern Utah sandblasting estimates, contact Atlas Abrasives & Coatings with your project details.

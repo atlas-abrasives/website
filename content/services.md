@@ -1,12 +1,12 @@
 ---
 title: "Services"
 seoTitle: "Utah Sandblasting Services | Atlas Abrasives & Coatings"
-description: "Utah and Box Elder County sandblasting services including mobile abrasive blasting, coating removal, and surface prep for steel, concrete, masonry, and equipment."
+description: "Brigham City and Northern Utah sandblasting services including mobile abrasive blasting, coating removal, and surface prep for steel, concrete, masonry, and equipment."
 ---
 
 Atlas Abrasives & Coatings provides professional surface preparation services tailored to your substrate, coating system, and schedule.
 
-If you are comparing options for Utah sandblasting contractors, our focus is straightforward: proper prep profile, clean containment, and dependable field execution.
+If you are comparing options for Northern Utah sandblasting contractors, our focus is straightforward: proper prep profile, clean containment, and dependable field execution.
 
 ## Sandblasting and Surface Preparation
 
@@ -24,9 +24,9 @@ Our mobile service setup allows us to complete prep work at your location for fa
 
 If your project is easier to transport, you can also bring parts or equipment to us for blasting and surface preparation.
 
-## Brigham City, Box Elder County, and Northern Utah Coverage
+## Brigham City and Northern Utah Coverage
 
-We serve Brigham City, Box Elder County, and projects across Northern Utah, including industrial yards, farm equipment lots, commercial sites, and residential restoration jobs.
+We serve Brigham City and projects across Northern Utah, including industrial yards, farm equipment lots, commercial sites, and residential restoration jobs.
 
 For local scope details, visit our [Box Elder County sandblasting page](/box-elder-county-sandblasting/).
 

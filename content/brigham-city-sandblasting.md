@@ -16,7 +16,7 @@ Looking for **Brigham City sandblasting** that is reliable, responsive, and buil
 
 Atlas Abrasives & Coatings provides abrasive blasting and surface prep for local residential, commercial, and industrial projects.
 
-We also support nearby Box Elder County projects that need the same high-standard prep and coating readiness.
+We also support nearby Northern Utah projects that need the same high-standard prep and coating readiness.
 
 ## Mobile Service or Drop-Off Service
 
