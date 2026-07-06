@@ -1,0 +1,39 @@
+{{ define "main" }}
+<main class="container-width space-y-6">
+  <section class="panel hero-rivet p-6 sm:p-10">
+    <p class="eyebrow">Atlas Abrasives &amp; Coatings</p>
+    <h1 class="section-title mt-2">{{ .Title }}</h1>
+    {{ with .Description }}
+    <p class="mt-4 max-w-3xl text-base sm:text-lg text-muted">{{ . }}</p>
+    {{ end }}
+  </section>
+
+  <section class="grid gap-6 sm:grid-cols-2">
+    {{ range .Pages.ByWeight }}
+    <article class="panel flex flex-col p-6 sm:p-8">
+      <p class="eyebrow">Case Study &middot; {{ .Date.Format "January 2006" }}</p>
+      <h2 class="mt-2">
+        <a href="{{ .RelPermalink }}" class="font-display text-2xl uppercase tracking-[0.08em] text-rust-400 underline decoration-rust-500/70 underline-offset-4 transition hover:text-rust-300">
+          {{ .Title }}
+        </a>
+      </h2>
+      {{ with .Description }}
+      <p class="mt-3 text-sm text-muted">{{ . }}</p>
+      {{ end }}
+      <div class="mt-auto pt-5">
+        <a href="{{ .RelPermalink }}" class="btn-secondary">Read the Case Study</a>
+      </div>
+    </article>
+    {{ end }}
+  </section>
+
+  <section class="panel p-6 sm:p-10">
+    <p class="eyebrow">Your Project Next</p>
+    <h2 class="section-title mt-2">Have a project like these?</h2>
+    <p class="mt-4 max-w-3xl text-muted">From custom rock engraving to antique restoration and industrial surface prep, we handle blasting and coating projects across Brigham City and Northern Utah.</p>
+    <div class="mt-6">
+      <a href="/contact/" class="btn-primary">Request a Quote</a>
+    </div>
+  </section>
+</main>
+{{ end }}

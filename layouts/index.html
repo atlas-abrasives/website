@@ -177,5 +177,27 @@
       </div>
     </div>
   </section>
+
+  <section class="container-width">
+    <div class="panel p-6 sm:p-10">
+      <p class="eyebrow">Follow Along</p>
+      <h2 class="section-title mt-2">See the Work on Social</h2>
+      <p class="mt-4 max-w-3xl text-muted">Blasting videos, before-and-afters, and project breakdowns from job sites around Brigham City and Northern Utah. Follow Atlas Abrasives &amp; Coatings on Instagram and TikTok.</p>
+      <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+        {{ with .Site.Params.social.instagram }}
+        <a href="{{ . }}" target="_blank" rel="noopener" class="btn-secondary gap-3">
+          {{ partial "icon-instagram.html" "h-5 w-5" }}
+          <span>Instagram {{ $.Site.Params.social.instagramHandle }}</span>
+        </a>
+        {{ end }}
+        {{ with .Site.Params.social.tiktok }}
+        <a href="{{ . }}" target="_blank" rel="noopener" class="btn-secondary gap-3">
+          {{ partial "icon-tiktok.html" "h-5 w-5" }}
+          <span>TikTok {{ $.Site.Params.social.tiktokHandle }}</span>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </section>
 </main>
 {{ end }}

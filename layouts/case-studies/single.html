@@ -1,0 +1,27 @@
+{{ define "main" }}
+<main class="container-width space-y-6">
+  <section class="panel hero-rivet p-6 sm:p-10">
+    <p class="eyebrow">Case Study &middot; {{ .Date.Format "January 2006" }}</p>
+    <h1 class="section-title mt-2">{{ .Title }}</h1>
+    {{ with .Description }}
+    <p class="mt-4 max-w-3xl text-base sm:text-lg text-muted">{{ . }}</p>
+    {{ end }}
+  </section>
+
+  <section class="panel p-7 sm:p-12">
+    <div class="content-body">
+      {{ .Content }}
+    </div>
+  </section>
+
+  <section class="panel p-6 sm:p-10">
+    <p class="eyebrow">Start Your Project</p>
+    <h2 class="section-title mt-2">{{ .Params.ctaTitle | default "Have a project like this?" }}</h2>
+    <p class="mt-4 max-w-3xl text-muted">{{ .Params.ctaText | default "We handle blasting and coating projects of all shapes and sizes across Brigham City and Northern Utah. Tell us about yours and we will put together a straightforward quote." }}</p>
+    <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+      <a href="/contact/" class="btn-primary">Request a Quote</a>
+      <a href="tel:{{ .Site.Params.contact.phone }}" class="btn-secondary">Call {{ .Site.Params.contact.phoneDisplay }}</a>
+    </div>
+  </section>
+</main>
+{{ end }}

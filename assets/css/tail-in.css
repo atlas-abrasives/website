@@ -12,7 +12,7 @@
   }
 
   .nav-link {
-    @apply border-b-2 border-transparent px-1 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-steel-200 transition hover:border-rust-500 hover:text-white;
+    @apply whitespace-nowrap border-b-2 border-transparent px-1 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-steel-200 transition hover:border-rust-500 hover:text-white;
   }
 
   .nav-link-active {

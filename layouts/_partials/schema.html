@@ -9,8 +9,8 @@
 {{ $longitude := $contact.longitude }}
 {{ $serviceArea := $contact.serviceArea }}
 {{ $sameAs := slice }}
-{{ with .Site.Params.social.facebook }}{{ $sameAs = $sameAs | append . }}{{ end }}
 {{ with .Site.Params.social.instagram }}{{ $sameAs = $sameAs | append . }}{{ end }}
+{{ with .Site.Params.social.tiktok }}{{ $sameAs = $sameAs | append . }}{{ end }}
 
 <script type="application/ld+json">
 {

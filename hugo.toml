@@ -35,8 +35,10 @@ hours = "Mon-Fri 7:00 AM-6:00 PM"
 serviceArea = "Brigham City and surrounding Northern Utah communities"
 
 [params.social]
-facebook = ""
-instagram = ""
+instagram = "https://www.instagram.com/atlas.abrasives/"
+instagramHandle = "@atlas.abrasives"
+tiktok = "https://www.tiktok.com/@atlas.abrasives"
+tiktokHandle = "@atlas.abrasives"
 
 [menu]
 [[menu.main]]
@@ -50,11 +52,16 @@ url = "/services/"
 weight = 2
 
 [[menu.main]]
+name = "Case Studies"
+url = "/case-studies/"
+weight = 3
+
+[[menu.main]]
 name = "About"
 url = "/about/"
-weight = 3
+weight = 4
 
 [[menu.main]]
 name = "Contact"
 url = "/contact/"
-weight = 4
+weight = 5

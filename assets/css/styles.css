@@ -148,6 +148,10 @@ main a:hover {
   color: #e4e8eb;
 }
 
+.instagram-embed {
+  margin: 1.5rem 0;
+}
+
 .content-body img {
   display: block;
   width: 100%;
