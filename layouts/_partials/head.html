@@ -3,6 +3,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
 
+  {{ with .Site.Params.googleTagId }}
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ . }}');
+  </script>
+  {{ with $.Params.googlePageLoadConversion }}
+  <!-- Event snippet for page view conversion -->
+  <script>
+    gtag('event', 'conversion', {
+        'send_to': '{{ . }}',
+        'value': 1.0,
+        'currency': 'USD'
+    });
+  </script>
+  {{ end }}
+  {{ end }}
+
   {{ $siteTitle := .Site.Title }}
   {{ $resolvedTitle := .Params.seoTitle | default .Title | default $siteTitle }}
   {{ $pageTitle := $resolvedTitle }}

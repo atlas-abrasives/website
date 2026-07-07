@@ -20,6 +20,7 @@ description = "Atlas Abrasives & Coatings is a Brigham City sandblasting company
 defaultImage = "/img/og-atlas-abrasives.svg"
 ownerName = "Kade Atkinson"
 ownerTitle = "Owner/Operator"
+googleTagId = "AW-18175314376"
 
 [params.contact]
 phone = "+14359790770"
