@@ -22,6 +22,11 @@
           {{ partial "icon-tiktok.html" "h-6 w-6" }}
         </a>
         {{ end }}
+        {{ with .Site.Params.social.facebook }}
+        <a href="{{ . }}" target="_blank" rel="noopener" aria-label="Atlas Abrasives &amp; Coatings on Facebook" class="text-steel-300 transition hover:text-rust-400">
+          {{ partial "icon-facebook.html" "h-6 w-6" }}
+        </a>
+        {{ end }}
       </div>
     </div>
 
