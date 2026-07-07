@@ -28,7 +28,7 @@ If your project is easier to transport, you can also bring parts or equipment to
 
 We serve Brigham City and projects across Northern Utah, including industrial yards, farm equipment lots, commercial sites, and residential restoration jobs.
 
-For local scope details, visit our [Box Elder County sandblasting page](/box-elder-county-sandblasting/).
+For local scope details, visit our [Brigham City sandblasting page](/brigham-city-sandblasting/).
 
 ## Residential, Commercial, and Industrial Work
 
